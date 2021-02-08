@@ -1,0 +1,138 @@
+/* this is where all of your CSS styles go */
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+.grid_container {
+	width: 500px;
+	height: 100px;
+	position: relative;
+	left: 50%;
+	top: 52%; /* for optical centering */
+	margin-top: -50px;
+	margin-left: -250px;
+}
+
+.mono {
+	font-family: 'Red Rose';
+	font-size: 6em;
+	float: left;
+	margin-left: 5px;
+}
+
+@keyframes a_up {
+  0% { top: 0px; left: 0px; opacity: 1; }
+  50% { top: -87.5px; left: 0px; opacity: 1; }
+  100% { top: -175px; left: 0px; opacity: 0; }
+}
+
+.a, .a2{
+  position: relative;
+  animation: a_up 1.5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes left_shift {
+  0% { top: 0px; left: 0px; }
+  100% { top: 0px; left: -77px; color: #6532fc; }
+}
+
+.i, .m, .t, .e{
+  position: relative;
+  animation: left_shift 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes n_move {
+  0% { top: 0px; left: 0px; color: black; }
+  25% { top: 0px; left: -77px; color: #6532fc; }
+  50% { top: -85px; left: -77px; color: #6532fc;}
+  75% { top: -85px; left: 35px; color: #6532fc;}
+  100% { top: 0px; left: 35px; color: #6532fc;}
+}
+
+.n {
+  position: relative;
+  animation: n_move 4s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes m_move {
+  0% { top: 0px; left: 0px; color: black;}
+  25% { top: 0px; left: -77px; color: #6532fc;}
+  50% { top: 85px; left: -77px; color: #6532fc;}
+  75% { top: 85px; left: -205px; color: #6532fc;}
+  100% { top: 0px; left: -205px; color: #6532fc;}
+}
+
+.m {
+  position: relative;
+  animation: m_move 4s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear{
+  0% { opacity: 0; }
+  100% { opacity: 1;}
+}
+
+.u{
+  position: relative;
+  color: #6532fc;
+  opacity: 0;
+  top: -96px;
+  left: 195px;
+  animation: appear 1s ease-in;
+  animation-delay: 4.6s;
+  animation-fill-mode: forwards;
+}
+
+.s{
+  position: relative;
+  color: #6532fc;
+  opacity: 0;
+  top: -96px;
+  left: 345px;
+  animation: appear 1s ease-in;
+  animation-delay: 4.6s;
+  animation-fill-mode: forwards;
+}
+
+.t{
+  margin-left: 1px;
+}
+
+.circle{
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  border-radius: 100%;
+  border: solid black 10px;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+@keyframes tick {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.hand{
+  border-left: solid 8px black;
+  width: 0px;
+  height: 55px;
+  position: absolute;
+  top: -150%;
+  left: 49.5%;
+  transform-origin: 50% 100%;
+  animation: tick 5s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+}
